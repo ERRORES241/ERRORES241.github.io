@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мікроконтролери — Архітектура</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Мікроконтролери</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="architecture.html" class="active">Архітектура</a></li>
+    <li><a href="types.html">Типи</a></li>
+    <li><a href="comparison.html">Порівняння</a></li>
+    <li><a href="applications.html">Застосування</a></li>
+  </ul>
+  <button class="burger" id="burger">☰</button>
+</nav>
+
+<main>
+  <header class="page-header">
+    <p class="page-label">Сторінка 02 / 05</p>
+    <h1>Архітектура мікроконтролера</h1>
+    <p>Внутрішня будова МК: процесорне ядро, пам'ять, шини та периферійні блоки.</p>
+  </header>
+
+  <section class="section">
+    <h2>Структура мікроконтролера</h2>
+    <figure class="table-wrap">
+      <table class="arch-table">
+        <tbody>
+          <tr class="arch-cpu">
+            <td class="block-name">CPU (ядро)</td>
+            <td>Арифметично-логічний пристрій (АЛП), регістри, пристрій керування, генератор тактів / PLL</td>
+          </tr>
+          <tr>
+            <td class="block-name">Flash ROM</td>
+            <td>Пам'ять програм. Незалежна, зберігає прошивку навіть без живлення. Обсяг: від 4 КБ до 4 МБ.</td>
+          </tr>
+          <tr>
+            <td class="block-name">SRAM</td>
+            <td>Оперативна пам'ять. Зберігає змінні та стек під час роботи. Очищується при вимкненні.</td>
+          </tr>
+          <tr>
+            <td class="block-name">EEPROM</td>
+            <td>Енергонезалежна пам'ять для збереження налаштувань між перезавантаженнями.</td>
+          </tr>
+          <tr>
+            <td class="block-name">GPIO</td>
+            <td>Цифрові піни введення/виведення. Кожен конфігурується як вхід або вихід. Підтримують переривання.</td>
+          </tr>
+          <tr>
+            <td class="block-name">UART / SPI / I²C</td>
+            <td>Інтерфейси зв'язку з датчиками, дисплеями та іншими пристроями.</td>
+          </tr>
+          <tr>
+            <td class="block-name">Таймери / PWM</td>
+            <td>Відлік часу, генерація ШІМ-сигналу для керування двигунами та LED.</td>
+          </tr>
+          <tr>
+            <td class="block-name">ADC</td>
+            <td>Аналого-цифровий перетворювач. Перетворює аналоговий сигнал у число (10–12 біт).</td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+  </section>
+
+  <section class="section">
+    <h2>Ключові блоки</h2>
+    <ul class="cards">
+      <li><article class="card">
+        <p class="card-tag">CPU</p>
+        <h3>Процесорне ядро</h3>
+        <p>Виконує інструкції програми. Містить АЛП, регістри та пристрій керування. Розрядність: 8, 16 або 32 біти.</p>
+      </article></li>
+      <li><article class="card">
+        <p class="card-tag">Flash</p>
+        <h3>Пам'ять програм</h3>
+        <p>Незалежна Flash-пам'ять зберігає код навіть без живлення. Типово: від 4 КБ до 4 МБ.</p>
+      </article></li>
+      <li><article class="card">
+        <p class="card-tag">SRAM</p>
+        <h3>Оперативна пам'ять</h3>
+        <p>Зберігає змінні, стек і дані під час роботи програми. Найдефіцитний ресурс у 8-бітних МК.</p>
+      </article></li>
+      <li><article class="card">
+        <p class="card-tag">ADC</p>
+        <h3>Аналого-цифровий перетворювач</h3>
+        <p>Перетворює аналоговий сигнал (0…3.3В) у цифрове число. Роздільна здатність: 10–12 біт.</p>
+      </article></li>
+      <li><article class="card">
+        <p class="card-tag">Переривання</p>
+        <h3>Система переривань</h3>
+        <p>Дозволяє реагувати на події (кнопка, таймер, UART) без постійного опитування.</p>
+      </article></li>
+      <li><article class="card">
+        <p class="card-tag">GPIO</p>
+        <h3>Порти введення/виведення</h3>
+        <p>Кожен пін налаштовується як вхід або вихід. Підтримують pull-up/pull-down резистори.</p>
+      </article></li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Архітектурні моделі</h2>
+    <ul class="cards">
+      <li><article class="card">
+        <p class="card-tag">Гарвардська архітектура</p>
+        <h3>Розділені шини</h3>
+        <p>Окремі шини для пам'яті програм і даних. Дозволяє одночасно зчитувати інструкцію і дані. Використовується в AVR, PIC.</p>
+      </article></li>
+      <li><article class="card">
+        <p class="card-tag">Архітектура фон Неймана</p>
+        <h3>Спільна шина</h3>
+        <p>Одна шина для програм і даних. Простіше апаратно. Використовується в ARM Cortex-M.</p>
+      </article></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <strong class="footer-logo">Мікроконтролери</strong>
+  <small>Лабораторна робота №3 · Адаптивний дизайн · 2026</small>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+</body>
+</html>

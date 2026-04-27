@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мікроконтролери — Порівняння</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Мікроконтролери</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="architecture.html">Архітектура</a></li>
+    <li><a href="types.html">Типи</a></li>
+    <li><a href="comparison.html" class="active">Порівняння</a></li>
+    <li><a href="applications.html">Застосування</a></li>
+  </ul>
+  <button class="burger" id="burger">☰</button>
+</nav>
+
+<main>
+  <header class="page-header">
+    <p class="page-label">Сторінка 04 / 05</p>
+    <h1>Порівняння мікроконтролерів</h1>
+    <p>Ключові характеристики популярних МК в одній таблиці.</p>
+  </header>
+
+  <section class="section">
+    <h2>Основні характеристики</h2>
+    <figure class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Модель</th>
+            <th>Архітектура</th>
+            <th>Flash</th>
+            <th>SRAM</th>
+            <th>Частота</th>
+            <th>Інтерфейси</th>
+            <th>Wi-Fi / BT</th>
+            <th>Клас</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ATtiny85</strong></td>
+            <td>AVR 8-біт</td>
+            <td>8 КБ</td>
+            <td>512 Б</td>
+            <td>8 МГц</td>
+            <td>SPI, I²C</td>
+            <td>—</td>
+            <td><b class="tag tag-gray">Мінімальний</b></td>
+          </tr>
+          <tr>
+            <td><strong>ATmega328P</strong></td>
+            <td>AVR 8-біт</td>
+            <td>32 КБ</td>
+            <td>2 КБ</td>
+            <td>16 МГц</td>
+            <td>UART, SPI, I²C</td>
+            <td>—</td>
+            <td><b class="tag tag-gray">Базовий</b></td>
+          </tr>
+          <tr>
+            <td><strong>PIC16F877A</strong></td>
+            <td>PIC 8-біт</td>
+            <td>14 КБ</td>
+            <td>368 Б</td>
+            <td>20 МГц</td>
+            <td>UART, SPI, I²C</td>
+            <td>—</td>
+            <td><b class="tag tag-gray">Базовий</b></td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>STM32F103C8</strong></td>
+            <td>ARM Cortex-M3</td>
+            <td>64 КБ</td>
+            <td>20 КБ</td>
+            <td>72 МГц</td>
+            <td>CAN, USB, I²C, SPI</td>
+            <td>—</td>
+            <td><b class="tag tag-blue">Середній</b></td>
+          </tr>
+          <tr>
+            <td><strong>RP2040</strong></td>
+            <td>ARM Cortex-M0+</td>
+            <td>2 МБ</td>
+            <td>264 КБ</td>
+            <td>133 МГц</td>
+            <td>USB, SPI, I²C, PIO</td>
+            <td>—</td>
+            <td><b class="tag tag-blue">Середній</b></td>
+          </tr>
+          <tr>
+            <td><strong>STM32F407VG</strong></td>
+            <td>ARM Cortex-M4</td>
+            <td>1 МБ</td>
+            <td>192 КБ</td>
+            <td>168 МГц</td>
+            <td>Ethernet, USB, CAN</td>
+            <td>—</td>
+            <td><b class="tag tag-blue">Просунутий</b></td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>ESP32-WROOM</strong></td>
+            <td>Xtensa LX6 dual</td>
+            <td>4 МБ</td>
+            <td>520 КБ</td>
+            <td>240 МГц</td>
+            <td>Wi-Fi, BT, UART, SPI</td>
+            <td>✓ / ✓</td>
+            <td><b class="tag tag-green">IoT</b></td>
+          </tr>
+          <tr>
+            <td><strong>ESP32-S3</strong></td>
+            <td>Xtensa LX7 dual</td>
+            <td>8 МБ</td>
+            <td>512 КБ</td>
+            <td>240 МГц</td>
+            <td>Wi-Fi, BLE, USB, AI</td>
+            <td>✓ / ✓</td>
+            <td><b class="tag tag-green">IoT+AI</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+  </section>
+
+  <section class="section">
+    <h2>Порівняння продуктивності</h2>
+    <figure class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Модель</th>
+            <th>Продуктивність</th>
+            <th>Енергоефективність</th>
+            <th>Вартість</th>
+            <th>Складність освоєння</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ATmega328P</strong></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:20%"></b><b class="bar-label">Низька</b></p></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:80%"></b><b class="bar-label">Висока</b></p></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:15%"></b><b class="bar-label">~$1</b></p></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:20%"></b><b class="bar-label">Легко</b></p></td>
+          </tr>
+          <tr>
+            <td><strong>STM32F103</strong></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:55%"></b><b class="bar-label">Середня</b></p></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:65%"></b><b class="bar-label">Добра</b></p></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:30%"></b><b class="bar-label">~$2</b></p></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:55%"></b><b class="bar-label">Середньо</b></p></td>
+          </tr>
+          <tr>
+            <td><strong>ESP32</strong></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:80%"></b><b class="bar-label">Висока</b></p></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:45%"></b><b class="bar-label">Середня</b></p></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:25%"></b><b class="bar-label">~$3</b></p></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:40%"></b><b class="bar-label">Середньо</b></p></td>
+          </tr>
+          <tr>
+            <td><strong>STM32F407</strong></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:90%"></b><b class="bar-label">Дуже висока</b></p></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:50%"></b><b class="bar-label">Середня</b></p></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:55%"></b><b class="bar-label">~$8</b></p></td>
+            <td><p class="bar-wrap"><b class="bar" style="width:75%"></b><b class="bar-label">Складно</b></p></td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+  </section>
+
+  <section class="section">
+    <h2>Як обрати МК</h2>
+    <ul class="cards">
+      <li><article class="card">
+        <p class="card-tag">Навчання</p>
+        <h3>ATmega328P (Arduino)</h3>
+        <p>Найпростіший старт. Велика спільнота, тисячі прикладів. Ідеально для першого знайомства з МК.</p>
+      </article></li>
+      <li><article class="card">
+        <p class="card-tag">IoT проєкт</p>
+        <h3>ESP32</h3>
+        <p>Вбудований Wi-Fi та BT, висока продуктивність, низька ціна. Підходить для хмарних рішень.</p>
+      </article></li>
+      <li><article class="card">
+        <p class="card-tag">Промисловість</p>
+        <h3>STM32</h3>
+        <p>Широкий вибір моделей, надійність, підтримка від ST. Є версії з розширеним діапазоном температур.</p>
+      </article></li>
+      <li><article class="card">
+        <p class="card-tag">Хобі / Maker</p>
+        <h3>Raspberry Pi Pico</h3>
+        <p>Дешевий, потужний, підтримує MicroPython. Унікальний PIO дозволяє реалізувати будь-який інтерфейс.</p>
+      </article></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <strong class="footer-logo">Мікроконтролери</strong>
+  <small>Лабораторна робота №3 · Адаптивний дизайн · 2026</small>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+</body>
+</html>

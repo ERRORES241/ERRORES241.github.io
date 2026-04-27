@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мікроконтролери — Застосування</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Мікроконтролери</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="architecture.html">Архітектура</a></li>
+    <li><a href="types.html">Типи</a></li>
+    <li><a href="comparison.html">Порівняння</a></li>
+    <li><a href="applications.html" class="active">Застосування</a></li>
+  </ul>
+  <button class="burger" id="burger">☰</button>
+</nav>
+
+<main>
+  <header class="page-header">
+    <p class="page-label">Сторінка 05 / 05</p>
+    <h1>Застосування мікроконтролерів</h1>
+    <p>МК присутні у кожному сучасному пристрої — від зубної щітки до космічного апарата.</p>
+  </header>
+
+  <section class="section">
+    <h2>У цифрах</h2>
+    <ul class="specs-grid">
+      <li class="spec-item">
+        <p class="spec-value">50+</p>
+        <p class="spec-label">МК у сучасному автомобілі</p>
+      </li>
+      <li class="spec-item">
+        <p class="spec-value">~30</p>
+        <p class="spec-label">МК у смартфоні</p>
+      </li>
+      <li class="spec-item">
+        <p class="spec-value">28 млрд</p>
+        <p class="spec-label">МК продано у 2023 році</p>
+      </li>
+      <li class="spec-item">
+        <p class="spec-value">IoT</p>
+        <p class="spec-label">Найбільший ринок зростання</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Приклади проєктів</h2>
+    <ul class="cards">
+      <li><article class="app-card">
+        <figure class="app-img">[ розумний дім ]<br />датчики · реле · дисплей</figure>
+        <section class="app-body">
+          <h3>Розумний дім</h3>
+          <p>Автоматизація освітлення, клімат-контроль, датчики руху та диму. Керування через Wi-Fi.</p>
+          <p class="app-mcu">ESP32 · STM32</p>
+        </section>
+      </article></li>
+      <li><article class="app-card">
+        <figure class="app-img">[ робот / маніпулятор ]<br />сервоприводи · енкодери</figure>
+        <section class="app-body">
+          <h3>Робототехніка</h3>
+          <p>Керування сервоприводами, зчитування енкодерів, обробка даних IMU для балансування.</p>
+          <p class="app-mcu">STM32F4 · RP2040 · ESP32</p>
+        </section>
+      </article></li>
+      <li><article class="app-card">
+        <figure class="app-img">[ медичний пристрій ]<br />пульсоксиметр · ЕКГ</figure>
+        <section class="app-body">
+          <h3>Медичні пристрої</h3>
+          <p>Пульсоксиметри, глюкометри, портативні ЕКГ. Вимагають низького споживання.</p>
+          <p class="app-mcu">nRF52 · STM32L4 · MSP430</p>
+        </section>
+      </article></li>
+      <li><article class="app-card">
+        <figure class="app-img">[ метеостанція ]<br />температура · вологість · тиск</figure>
+        <section class="app-body">
+          <h3>Метеостанція</h3>
+          <p>Збір даних з датчиків BME280, SHT31. Відображення на OLED, передача в хмару.</p>
+          <p class="app-mcu">ESP32 · ATmega328P</p>
+        </section>
+      </article></li>
+      <li><article class="app-card">
+        <figure class="app-img">[ автомобільна електроніка ]<br />CAN bus · OBD-II</figure>
+        <section class="app-body">
+          <h3>Автомобільна електроніка</h3>
+          <p>Блоки керування двигуном, ABS, подушками безпеки. Протокол CAN, жорсткі вимоги.</p>
+          <p class="app-mcu">STM32 · Infineon TC · NXP S32</p>
+        </section>
+      </article></li>
+      <li><article class="app-card">
+        <figure class="app-img">[ промислова автоматика ]<br />ПЛК · SCADA · Modbus</figure>
+        <section class="app-body">
+          <h3>Промислова автоматика</h3>
+          <p>Програмовані логічні контролери (ПЛК), керування конвеєрами, моніторинг обладнання.</p>
+          <p class="app-mcu">STM32 · PIC32 · Cortex-M7</p>
+        </section>
+      </article></li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Коротка історія МК</h2>
+    <ol class="timeline">
+      <li class="tl-item">
+        <time class="tl-year">1971</time>
+        <h3 class="tl-title">Intel 4004 — перший мікропроцесор</h3>
+        <p class="tl-desc">4-бітний процесор для калькуляторів. Заклав основу для майбутніх МК.</p>
+      </li>
+      <li class="tl-item">
+        <time class="tl-year">1974</time>
+        <h3 class="tl-title">TMS1000 — перший мікроконтролер</h3>
+        <p class="tl-desc">Texas Instruments випустила першу мікросхему з процесором, пам'яттю та I/O на одному кристалі.</p>
+      </li>
+      <li class="tl-item">
+        <time class="tl-year">1980</time>
+        <h3 class="tl-title">Intel 8051 — галузевий стандарт</h3>
+        <p class="tl-desc">8-бітний МК, який досі застосовується. Архітектура 8051 є базовою у навчанні.</p>
+      </li>
+      <li class="tl-item">
+        <time class="tl-year">1997</time>
+        <h3 class="tl-title">Atmel AVR — RISC для мас</h3>
+        <p class="tl-desc">Перший МК, оптимізований для мов високого рівня. Основа Arduino (2005).</p>
+      </li>
+      <li class="tl-item">
+        <time class="tl-year">2007</time>
+        <h3 class="tl-title">ARM Cortex-M — домінування 32-біт</h3>
+        <p class="tl-desc">Cortex-M3 від ARM стала основою для STM32 та десятків інших сімейств.</p>
+      </li>
+      <li class="tl-item">
+        <time class="tl-year">2016</time>
+        <h3 class="tl-title">ESP32 — IoT для всіх</h3>
+        <p class="tl-desc">Espressif вивела Wi-Fi+BT МК за $3. Демократизація підключених пристроїв.</p>
+      </li>
+      <li class="tl-item">
+        <time class="tl-year">2021</time>
+        <h3 class="tl-title">RP2040 — відкрита платформа</h3>
+        <p class="tl-desc">Raspberry Pi Foundation випустила власний МК за $0.7 з унікальним PIO-блоком.</p>
+      </li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  <strong class="footer-logo">Мікроконтролери</strong>
+  <small>Лабораторна робота №3 · Адаптивний дизайн · 2026</small>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+</body>
+</html>

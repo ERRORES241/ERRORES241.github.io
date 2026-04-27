@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мікроконтролери — Головна</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Мікроконтролери</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Головна</a></li>
+    <li><a href="architecture.html">Архітектура</a></li>
+    <li><a href="types.html">Типи</a></li>
+    <li><a href="comparison.html">Порівняння</a></li>
+    <li><a href="applications.html">Застосування</a></li>
+  </ul>
+  <button class="burger" id="burger">☰</button>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <section class="hero-grid">
+    <section class="hero-text">
+      <p class="page-label">Лабораторна робота №3</p>
+      <h1>Мікроконтролери: від теорії до практики</h1>
+      <p>Мікроконтролер — інтегральна мікросхема з процесором, пам'яттю та периферією на одному кристалі. Основа вбудованих систем, IoT та робототехніки.</p>
+      <p class="btn-group">
+        <a href="architecture.html" class="btn">Почати вивчення</a>
+        <a href="comparison.html" class="btn btn-outline">Порівняти МК</a>
+      </p>
+    </section>
+    <figure class="hero-visual">
+      <img src="img.png" alt="Порівняння ATmega, ESP32 та STM32" />
+    </figure>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ЩО ТАКЕ МК -->
+  <section class="section">
+    <h2>Що таке мікроконтролер</h2>
+    <ul class="cards">
+      <li><article class="card">
+        <p class="card-tag">Визначення</p>
+        <h3>Система на кристалі</h3>
+        <p>МК об'єднує CPU, Flash, SRAM та периферійні модулі в одному корпусі — дешево і компактно.</p>
+      </article></li>
+      <li><article class="card">
+        <p class="card-tag">Відмінність від CPU</p>
+        <h3>Автономність</h3>
+        <p>На відміну від ПК-процесора, МК не потребує зовнішньої пам'яті або чіпсета.</p>
+      </article></li>
+      <li><article class="card">
+        <p class="card-tag">Програмування</p>
+        <h3>C / C++ / MicroPython</h3>
+        <p>Код компілюється і записується у Flash-пам'ять через програматор або USB-завантажувач.</p>
+      </article></li>
+      <li><article class="card">
+        <p class="card-tag">Застосування</p>
+        <h3>Скрізь навколо нас</h3>
+        <p>Побутова техніка, автомобілі, медичні пристрої, промислова автоматика, розумний дім.</p>
+      </article></li>
+    </ul>
+  </section>
+
+  <!-- РОЗДІЛИ САЙТУ -->
+  <section class="section">
+    <h2>Розділи сайту</h2>
+    <ul class="cards">
+      <li><a href="architecture.html" class="card">
+        <p class="card-tag">01</p>
+        <h3>Архітектура</h3>
+        <p>CPU, пам'ять, шини, периферія — як влаштований МК зсередині.</p>
+      </a></li>
+      <li><a href="types.html" class="card">
+        <p class="card-tag">02</p>
+        <h3>Типи МК</h3>
+        <p>8-біт AVR, 32-біт ARM, IoT ESP32 — огляд сімейств.</p>
+      </a></li>
+      <li><a href="comparison.html" class="card">
+        <p class="card-tag">03</p>
+        <h3>Порівняння</h3>
+        <p>Таблиця популярних мікроконтролерів за ключовими параметрами.</p>
+      </a></li>
+      <li><a href="applications.html" class="card">
+        <p class="card-tag">04</p>
+        <h3>Застосування</h3>
+        <p>Де і як МК використовуються у реальних продуктах.</p>
+      </a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <strong class="footer-logo">Мікроконтролери</strong>
+  <small>Лабораторна робота №3 · Адаптивний дизайн · 2026</small>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+</body>
+</html>

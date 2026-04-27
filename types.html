@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мікроконтролери — Типи</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Мікроконтролери</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="architecture.html">Архітектура</a></li>
+    <li><a href="types.html" class="active">Типи</a></li>
+    <li><a href="comparison.html">Порівняння</a></li>
+    <li><a href="applications.html">Застосування</a></li>
+  </ul>
+  <button class="burger" id="burger">☰</button>
+</nav>
+
+<main>
+  <header class="page-header">
+    <p class="page-label">Сторінка 03 / 05</p>
+    <h1>Типи мікроконтролерів</h1>
+    <p>Від простих 8-бітних до потужних 32-бітних ARM та бездротових IoT-модулів.</p>
+  </header>
+
+  <section class="section">
+    <h2>За розрядністю</h2>
+    <ul class="specs-grid">
+      <li class="spec-item">
+        <p class="spec-value">8-біт</p>
+        <p class="spec-label">Прості задачі, низька вартість</p>
+      </li>
+      <li class="spec-item">
+        <p class="spec-value">16-біт</p>
+        <p class="spec-label">Середній клас, DSP-операції</p>
+      </li>
+      <li class="spec-item">
+        <p class="spec-value">32-біт</p>
+        <p class="spec-label">Висока продуктивність, RTOS</p>
+      </li>
+      <li class="spec-item">
+        <p class="spec-value">64-біт</p>
+        <p class="spec-label">Вбудовані системи Linux</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Сімейства мікроконтролерів</h2>
+    <ul class="cards">
+
+      <li><article class="family-card">
+        <header class="family-header">
+          <hgroup>
+            <p class="card-tag">8-біт · Atmel / Microchip</p>
+            <h3>AVR</h3>
+          </hgroup>
+          <b class="tag tag-gray">Базовий</b>
+        </header>
+        <section class="family-body">
+          <p>Класичне сімейство для навчання та простих проєктів. RISC-архітектура, одна інструкція за такт. Основа Arduino.</p>
+          <ul class="family-models">
+            <li class="model-tag">ATmega328P</li>
+            <li class="model-tag">ATmega2560</li>
+            <li class="model-tag">ATtiny85</li>
+          </ul>
+          <ul class="family-specs">
+            <li class="fs-item"><p class="fs-k">Частота</p><p class="fs-v">8–20 МГц</p></li>
+            <li class="fs-item"><p class="fs-k">Flash</p><p class="fs-v">2–256 КБ</p></li>
+            <li class="fs-item"><p class="fs-k">Напруга</p><p class="fs-v">1.8–5.5 В</p></li>
+            <li class="fs-item"><p class="fs-k">Ціна</p><p class="fs-v">$0.5–3</p></li>
+          </ul>
+        </section>
+      </article></li>
+
+      <li><article class="family-card">
+        <header class="family-header">
+          <hgroup>
+            <p class="card-tag">8-біт · Microchip</p>
+            <h3>PIC</h3>
+          </hgroup>
+          <b class="tag tag-gray">Базовий</b>
+        </header>
+        <section class="family-body">
+          <p>Широко використовується у промисловості. Велика кількість моделей від 8-бітних до 32-бітних PIC32.</p>
+          <ul class="family-models">
+            <li class="model-tag">PIC16F877A</li>
+            <li class="model-tag">PIC18F4550</li>
+            <li class="model-tag">PIC32MX</li>
+          </ul>
+          <ul class="family-specs">
+            <li class="fs-item"><p class="fs-k">Частота</p><p class="fs-v">4–80 МГц</p></li>
+            <li class="fs-item"><p class="fs-k">Flash</p><p class="fs-v">1–512 КБ</p></li>
+            <li class="fs-item"><p class="fs-k">Напруга</p><p class="fs-v">2.0–5.5 В</p></li>
+            <li class="fs-item"><p class="fs-k">Ціна</p><p class="fs-v">$0.5–5</p></li>
+          </ul>
+        </section>
+      </article></li>
+
+      <li><article class="family-card">
+        <header class="family-header">
+          <hgroup>
+            <p class="card-tag">32-біт ARM · STMicroelectronics</p>
+            <h3>STM32</h3>
+          </hgroup>
+          <b class="tag tag-blue">Середній</b>
+        </header>
+        <section class="family-body">
+          <p>Найпопулярніше ARM-сімейство у промисловості. Cortex-M0 до M7. Багата периферія, підтримка RTOS.</p>
+          <ul class="family-models">
+            <li class="model-tag">STM32F103</li>
+            <li class="model-tag">STM32F407</li>
+            <li class="model-tag">STM32H743</li>
+          </ul>
+          <ul class="family-specs">
+            <li class="fs-item"><p class="fs-k">Частота</p><p class="fs-v">24–480 МГц</p></li>
+            <li class="fs-item"><p class="fs-k">Flash</p><p class="fs-v">16 КБ–2 МБ</p></li>
+            <li class="fs-item"><p class="fs-k">Напруга</p><p class="fs-v">1.7–3.6 В</p></li>
+            <li class="fs-item"><p class="fs-k">Ціна</p><p class="fs-v">$1–15</p></li>
+          </ul>
+        </section>
+      </article></li>
+
+      <li><article class="family-card">
+        <header class="family-header">
+          <hgroup>
+            <p class="card-tag">32-біт · Espressif</p>
+            <h3>ESP32</h3>
+          </hgroup>
+          <b class="tag tag-green">IoT</b>
+        </header>
+        <section class="family-body">
+          <p>Вбудований Wi-Fi та Bluetooth. Два ядра 240 МГц. Ідеальний для хмарних проєктів та розумного дому.</p>
+          <ul class="family-models">
+            <li class="model-tag">ESP32-WROOM</li>
+            <li class="model-tag">ESP32-S3</li>
+            <li class="model-tag">ESP8266</li>
+          </ul>
+          <ul class="family-specs">
+            <li class="fs-item"><p class="fs-k">Частота</p><p class="fs-v">80–240 МГц</p></li>
+            <li class="fs-item"><p class="fs-k">Flash</p><p class="fs-v">2–16 МБ</p></li>
+            <li class="fs-item"><p class="fs-k">Напруга</p><p class="fs-v">3.0–3.6 В</p></li>
+            <li class="fs-item"><p class="fs-k">Ціна</p><p class="fs-v">$2–8</p></li>
+          </ul>
+        </section>
+      </article></li>
+
+      <li><article class="family-card">
+        <header class="family-header">
+          <hgroup>
+            <p class="card-tag">32-біт ARM · Raspberry Pi Foundation</p>
+            <h3>RP2040</h3>
+          </hgroup>
+          <b class="tag tag-blue">Середній</b>
+        </header>
+        <section class="family-body">
+          <p>Перший власний МК від Raspberry Pi. Унікальний PIO-блок. Дешевий та потужний, підтримує MicroPython.</p>
+          <ul class="family-models">
+            <li class="model-tag">Raspberry Pi Pico</li>
+            <li class="model-tag">Pico W</li>
+          </ul>
+          <ul class="family-specs">
+            <li class="fs-item"><p class="fs-k">Частота</p><p class="fs-v">133 МГц</p></li>
+            <li class="fs-item"><p class="fs-k">SRAM</p><p class="fs-v">264 КБ</p></li>
+            <li class="fs-item"><p class="fs-k">Напруга</p><p class="fs-v">1.8–3.3 В</p></li>
+            <li class="fs-item"><p class="fs-k">Ціна</p><p class="fs-v">$0.7–4</p></li>
+          </ul>
+        </section>
+      </article></li>
+
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <strong class="footer-logo">Мікроконтролери</strong>
+  <small>Лабораторна робота №3 · Адаптивний дизайн · 2026</small>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+</body>
+</html>
